@@ -1,12 +1,24 @@
 <!doctype html>
 <html>
 <head>
+<style>
+html, body, iframe {width: 100%; height: 100%; margin: 0px 0px;}
+html {overflow-y: hidden;}
+</style>
 <script>
 window.addEventListener('load', evt => {
-  console.log(document.getElementById('map').src = 'https://maps.gsi.go.jp/')
+  const z = 16 + Math.floor(Math.random() * 3)
+  const lat = 36 + Math.random()
+  const lng = 138 + Math.random()
+  document.getElementById('map').src = 
+    `https://maps.gsi.go.jp/#${z}/${lat}/${lng}/`
 })
+const refresh = function() {
+  location.reload(true)
+}
+setTimeout(refresh, 120000)
 </script>
 </head>
 <body>
-<iframe name="map" id="map"></name>
+<iframe name="map" id="map" scrolling="no" frameborder="no"></name>
 </body>
