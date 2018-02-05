@@ -11,7 +11,8 @@ window.addEventListener('load', evt => {
   const lat = 36 + Math.random()
   const lng = 138 + Math.random()
   document.getElementById('map').src = 
-    `https://maps.gsi.go.jp/#${z}/${lat}/${lng}/`
+    'https://maps.gsi.go.jp/#' + z + '/' + lat + '/' + lng+ '/'
+    //`https://maps.gsi.go.jp/#${z}/${lat}/${lng}/`
 })
 const refresh = function() {
   location.reload(true)
